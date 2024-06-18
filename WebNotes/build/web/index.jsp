@@ -3,7 +3,11 @@
     Created on : 17-Jun-2024, 19:53:43
     Author     : ashan
 --%>
+<%
 
+    response.sendRedirect("YourNotes");
+
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
