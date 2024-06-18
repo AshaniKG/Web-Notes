@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 public class DBConnection {
     
-     private static final String url = "jdbc:mysql://localhost:3306/web_notes";
+    private static final String url = "jdbc:mysql://localhost:3306/web_notes";
     private static final String username = "root";
     private static final String password = "";
     
@@ -23,6 +23,8 @@ public class DBConnection {
         
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection connection = DriverManager.getConnection(url, username, password);
+    
+    
     
     return connection;
     }
