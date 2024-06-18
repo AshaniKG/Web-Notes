@@ -20,7 +20,7 @@ import model.noteDelete;
  *
  * @author Prasad
  */
-@WebServlet(name = "NoteDeleteController", urlPatterns = {"/NoteDeleteController"})
+@WebServlet(name = "NoteDeleteController", urlPatterns = {"/NoteDelete"})
 public class NoteDeleteController extends HttpServlet {
 
  

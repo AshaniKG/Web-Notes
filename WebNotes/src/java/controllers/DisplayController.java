@@ -29,8 +29,11 @@ public class DisplayController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        // Sandun Sign In unama UserId Eka Session ekata dala methanin eka Catch karanna oni
+        
        //        HttpSession session = request.getSession(true);
-//        String userId = session.getAttribute("userId").toString();
+       //        String userId = session.getAttribute("userId").toString();
            String userId = "2";
         
         try{

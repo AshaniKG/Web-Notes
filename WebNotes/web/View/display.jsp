@@ -69,7 +69,7 @@
         %>
         
             <div class="noteDivision">
-                <a href="UpdateNote">
+                <a href="UpdateNote?noteId=<%=  result.getString("id")%>">
                     <div class="noteContentDivision">
                         <div class="noteContentDateDivision">
                             <h4 class="noteContentDateText"><%= date %></h4>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="noteDeleteDivision">
-                        <form action="NoteDeleteController" method="POST" onsubmit="">
+                        <form action="NoteDelete" method="POST" >
                             <button class="noteDeleteButton" type="submit" name="noteId" value="<%= result.getString("id") %>" onclick="return confirm('Are you sure you want to delete this Note?');">
                                 Delete
                             </button>
