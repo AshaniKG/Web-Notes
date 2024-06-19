@@ -20,13 +20,16 @@ body {
     background-attachment: fixed;
     background-position: center;
 
-    display: flex;
+    display:flex;
     flex-direction: column;
-    align-items: end;
 }
 
+.topSpaceDiv{
+    height: 5%;
+}
 .noteDivision {
-    margin: 5%;
+    margin: 0px  5%;
+    margin-bottom: 30px;
 
     background-color: #72abb691;
     border-radius: 10px;
@@ -54,7 +57,7 @@ body {
     margin-right: 20px;
     background-color: #cededb;
     height: 100px;
-    width: 8%;
+    width: 100px;
     border-radius: 10px;
 
     display: flex;
@@ -142,6 +145,8 @@ body {
 
     position: sticky;
     top: 85%;
+    
+    align-self: flex-end;
 
     transition: all 0.5s ease;
 }
