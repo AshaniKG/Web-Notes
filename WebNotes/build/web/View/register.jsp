@@ -13,6 +13,26 @@
         <title>Register</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <section>
+        <div class="wrapper">
+            <form action="">
+                <h1>Register </h1>
+                <div class="input-box">
+                    <label for="">User Name</label>
+                    <input type="text"  name="username">
+                </div>
+                
+                <div class="input-box">
+                    <label for="">Password</label>
+                    <input type="password" name="password">
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit">Sing In</button>
+                    <button type="button">Sing Up</button>
+                </div>
+            </form>
+        </div>
+        </section>
     </body>
 </html>
