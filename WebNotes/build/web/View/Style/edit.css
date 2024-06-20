@@ -1,22 +1,110 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 17-Jun-2024, 20:20:27
-    Author     : ashan
-*/
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
 
-body
-{
+/* Reset and global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     margin: 0;
     height: 100vh;
-    overflow: hidden;
-    background-image: url("../Images/create.png");
+    overflow-x: hidden;
+    background-image: url("../Images/display.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Julee', cursive;
+    color: #011736;
 }
 
+
+.noteForm {
+    margin: 20px; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    height: 700px; 
+}
+
+.noteForm .formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.noteForm .formHeader .title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.noteForm .formHeader .date {
+    font-size: 18px;
+}
+
+
+.noteForm .formContent {
+    margin-top: 20px;
+    position: relative;
+}
+
+.noteForm .formContent textarea {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: 'Julee', cursive;
+}
+
+.titleLine {
+    border-color: #72ABB6;
+}
+
+
+.ButtonSection {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.ButtonSection .EditButton,
+.ButtonSection .DeleteButton,
+.ButtonSection .SaveButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+}
+
+.ButtonSection .EditButton:hover,
+.ButtonSection .DeleteButton:hover,
+.ButtonSection .SaveButton:hover {
+    background-color: #72ABB6;
+}
+
+.ButtonSection .EditButton img,
+.ButtonSection .DeleteButton img,
+.ButtonSection .SaveButton img {
+    width: 25px;
+    height: 25px;
+}
+
+
+.SaveButton {
+    display: none;
+}

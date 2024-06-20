@@ -48,7 +48,7 @@ public class DisplayController extends HttpServlet {
                    
                }
         }
-        catch(SQLException | ClassNotFoundException e)
+        catch(SQLException e)
         {
             System.out.println(e.getMessage() + " - Display Controller ResultSet");
         }  
