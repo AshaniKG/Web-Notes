@@ -50,22 +50,29 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Sign In</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
+      out.write("        <section>\r\n");
       out.write("        <div class=\"wrapper\">\r\n");
       out.write("            <form action=\"\">\r\n");
-      out.write("                <h1>Sign IN </h1>\r\n");
+      out.write("                <h1>Sign  IN </h1>\r\n");
       out.write("                <div class=\"input-box\">\r\n");
+      out.write("                    <label for=\"\">User Name</label>\r\n");
       out.write("                    <input type=\"text\"  name=\"username\">\r\n");
-      out.write("                    <label for=\"\">Username</label>\r\n");
       out.write("                </div>\r\n");
       out.write("                \r\n");
       out.write("                <div class=\"input-box\">\r\n");
-      out.write("                    <input type=\"password\" name=\"password\">\r\n");
       out.write("                    <label for=\"\">Password</label>\r\n");
+      out.write("                    <input type=\"password\" name=\"password\">\r\n");
+      out.write("                </div>\r\n");
+      out.write("                \r\n");
+      out.write("                <div class=\"buttons\">\r\n");
+      out.write("                    <button type=\"submit\">Sing In</button>\r\n");
+      out.write("                    <button type=\"button\">Sing Up</button>\r\n");
       out.write("                </div>\r\n");
       out.write("            </form>\r\n");
       out.write("        </div>\r\n");
+      out.write("        </section>\r\n");
       out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

@@ -42,18 +42,20 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"View/Style/register.css\">\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"Style/register.css\">\r\n");
       out.write("        <title>Register</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
       out.write("        <section>\r\n");
       out.write("        <div class=\"wrapper\">\r\n");
-      out.write("            <form action=\"\">\r\n");
-      out.write("                <h1>Register</h1>\r\n");
+      out.write("            <form action=\"/Registation\" method=\"post\">\r\n");
+      out.write("                <h1>Register </h1>\r\n");
       out.write("                <div class=\"input-box\">\r\n");
       out.write("                    <label for=\"\">User Name</label>\r\n");
       out.write("                    <input type=\"text\"  name=\"username\">\r\n");
@@ -65,14 +67,14 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("                \r\n");
       out.write("                <div class=\"buttons\">\r\n");
-      out.write("                    <button type=\"submit\">Sing In</button>\r\n");
-      out.write("                    <button type=\"button\">Sing Up</button>\r\n");
+      out.write("                    <button type=\"submit\">Sing Up</button>\r\n");
+      out.write("                    <button type=\"button\">Sing In</button>\r\n");
       out.write("                </div>\r\n");
       out.write("            </form>\r\n");
       out.write("        </div>\r\n");
       out.write("        </section>\r\n");
       out.write("    </body>\r\n");
-      out.write("</html>");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
