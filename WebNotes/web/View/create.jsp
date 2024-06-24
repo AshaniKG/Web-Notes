@@ -4,8 +4,15 @@
     Author     : ashan
 --%>
 
+
 <%@page import="java.time.LocalDate"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    LocalDate currentDate = LocalDate.now();
+    String date = currentDate.toString();        
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,11 +21,6 @@
         <title>Create Note</title>
     </head>
     <body>
-        
-        <%
-            LocalDate currentDate = LocalDate.now();
-            String date = currentDate.toString();        
-        %>
         
         <div class="backDiv" onmouseover="backOver()" onmouseout="backOut()" onclick="backClick()">
             <img class="icon" id="backIcon" src="../View/Assets/Arrow.png">
@@ -42,7 +44,6 @@
                 <img class="icon" id="saveIcon" src="../View/Assets/Save.png">
             </div>
         </form>
-        
         
         <script>
             //Back button functions

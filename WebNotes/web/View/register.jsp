@@ -15,6 +15,7 @@
     <body>
         <section>
         <div class="wrapper">
+
             <form action="/WebNotes/Registation" method="post">
                 <h1>Register </h1>
                 <div class="input-box">

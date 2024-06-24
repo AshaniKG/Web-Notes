@@ -14,7 +14,6 @@
         <title>Create Note</title>
     </head>
     <body>
-        
         <%
             LocalDate currentDate = LocalDate.now();
             String date = currentDate.toString();        
@@ -42,8 +41,7 @@
                 <img class="icon" id="saveIcon" src="../View/Assets/Save.png">
             </div>
         </form>
-        
-        
+
         <script>
             //Back button functions
 
