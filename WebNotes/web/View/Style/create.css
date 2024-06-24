@@ -116,12 +116,15 @@ body
 {
     font-family: "Julee", cursive;
     font-size: 30px;
+    
+    color: #011736;
 
     border: none;
     background: none;
     background-color: transparent;
     outline: none;
 
+    width: 95%;
     margin-top: 45px;
     margin-left: 10px;
 }

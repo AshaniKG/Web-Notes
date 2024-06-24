@@ -59,6 +59,6 @@
           System.out.println(ex.getMessage());
         }
     %>
-    <script src="/WebNotes/View/Style/edit.js"></script>
+    <script src="/WebNotes/View/JS/edit.js"></script>
 </body>
 </html>
