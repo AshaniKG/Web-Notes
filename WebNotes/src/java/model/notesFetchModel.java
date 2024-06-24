@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class notesFetchModel {
 
-    public static ResultSet fetchNotes(String userId) throws SQLException, ClassNotFoundException {
+    public static ResultSet fetchNotesByUserId(String userId) throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM notes WHERE user_id = ?";
         Connection connection = DBConnection.getConnection();
         PreparedStatement stmt = connection.prepareStatement(sql);
@@ -16,7 +16,7 @@ public class notesFetchModel {
         return result; 
     }
 
-    public static ResultSet fetchNoteById(String noteId) throws SQLException, ClassNotFoundException {
+    public static ResultSet fetchNoteByNoteId(String noteId) throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM notes WHERE id = ?";
         Connection connection = DBConnection.getConnection();
         PreparedStatement stmt = connection.prepareStatement(sql);

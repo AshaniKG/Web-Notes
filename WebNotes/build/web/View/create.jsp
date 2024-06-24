@@ -5,22 +5,24 @@
 --%>
 
 <%@page import="java.time.LocalDate"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    LocalDate currentDate = LocalDate.now();
+    String date = currentDate.toString();        
+%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="Style/create.css">
+        <link rel="stylesheet" href="/WebNotes/View/Style/create.css">
         <title>Create Note</title>
     </head>
     <body>
-        <%
-            LocalDate currentDate = LocalDate.now();
-            String date = currentDate.toString();        
-        %>
         
         <div class="backDiv" onmouseover="backOver()" onmouseout="backOut()" onclick="backClick()">
-            <img class="icon" id="backIcon" src="../View/Assets/Arrow.png">
+            <img class="icon" id="backIcon" src="/WebNotes/View/Assets/Arrow.png">
         </div>
         <form id="form" action="/WebNotes/CreateNote" method="POST">
             <div class="noteDiv">
@@ -38,23 +40,23 @@
                 </div>       
             </div>   
             <div class="saveDiv" onmouseover="saveOver()" onmouseout="saveOut()" onclick="document.getElementById('form').submit()">
-                <img class="icon" id="saveIcon" src="../View/Assets/Save.png">
+                <img class="icon" id="saveIcon" src="/WebNotes/View/Assets/Save.png">
             </div>
         </form>
-
+        
         <script>
             //Back button functions
 
             function backOver() 
                 {
                     var back = document.getElementById("backIcon");
-                    back.src = "../View/Assets/Arrow 1.png";
+                    back.src = "/WebNotes/View/Assets/Arrow 1.png";
                 }
 
             function backOut() 
                 {
                     var back = document.getElementById("backIcon");
-                    back.src = "../View/Assets/Arrow.png";
+                    back.src = "/WebNotes/View/Assets/Arrow.png";
                 }
 
 
@@ -69,13 +71,13 @@
             function saveOver() 
                 {
                     var save = document.getElementById("saveIcon");
-                    save.src = "../View/Assets/Save 1.png";
+                    save.src = "/WebNotes/View/Assets/Save 1.png";
                 }
 
             function saveOut() 
                 {
                     var save = document.getElementById("saveIcon");
-                    save.src = "../View/Assets/Save.png";
+                    save.src = "/WebNotes/View/Assets/Save.png";
                 }
 
         </script>

@@ -1,6 +1,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.SQLException"%>
-<%@page import="model.noteFetchModel"%>
+<%@page import="model.notesFetchModel"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="model.DBConnection"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -18,7 +18,7 @@
     <%
         String noteId = request.getParameter("noteId");
         try {
-            ResultSet noteResult = noteFetchModel.fetchNoteById(noteId);
+            ResultSet noteResult = notesFetchModel.fetchNoteByNoteId(noteId);
             if (noteResult.next()) {
                 String title = noteResult.getString("title");
                 String date = noteResult.getString("date");
@@ -54,9 +54,9 @@
             }
             noteResult.close();
         } catch (SQLException ex) {
-            Logger.getLogger(edit.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(edit.class.getName()).log(Level.SEVERE, null, ex);
+          System.out.println(ex.getMessage());
         }
     %>
     <script src="/WebNotes/View/Style/edit.js"></script>

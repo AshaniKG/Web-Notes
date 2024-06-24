@@ -6,8 +6,8 @@
 package controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -37,28 +37,35 @@ public class createController extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
         {
-            String title = request.getParameter("title");
-            String date = request.getParameter("date");
-            String content = request.getParameter("content");
-            
-            //HttpSession session = request.getSession(true);
-            //String userId = session.getAttribute("userId").toString();
-            String userId = "2";
-            
-            try 
-                {
-                    noteCreateModel.createNote (title, date, content, userId);
-                } 
-            catch (SQLException ex) 
-                {
-                    Logger.getLogger(createController.class.getName()).log(Level.SEVERE, null, ex);
-                } 
-            catch (ClassNotFoundException ex) 
-                {
-                    Logger.getLogger(createController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                    
-            response.sendRedirect("/WebNotes/YourNotes");
+           
+            String type = request.getParameter(" ");
+                    if(Objects.nonNull(type)){
+                        request.getRequestDispatcher("/View/create.jsp").forward(request, response);
+                    }
+                    else{
+                        
+                               HttpSession session = request.getSession(true);
+                               String userId = session.getAttribute("userId").toString();
+                               
+                               String title = request.getParameter("title");
+                               String date = request.getParameter("date");
+                               String content = request.getParameter("content");
+
+                               try 
+                                   {
+                                       noteCreateModel.createNote (title, date, content, userId);
+                                   } 
+                               catch (SQLException ex) 
+                                   {
+                                       Logger.getLogger(createController.class.getName()).log(Level.SEVERE, null, ex);
+                                   } 
+                               catch (ClassNotFoundException ex) 
+                                   {
+                                       Logger.getLogger(createController.class.getName()).log(Level.SEVERE, null, ex);
+                                   }
+                               
+                               response.sendRedirect("/WebNotes/YourNotes");
+                         }
         }
 
 }
