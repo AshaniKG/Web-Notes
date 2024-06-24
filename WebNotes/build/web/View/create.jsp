@@ -4,6 +4,7 @@
     Author     : ashan
 --%>
 
+<%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,33 +14,34 @@
         <title>Create Note</title>
     </head>
     <body>
+        <%
+            LocalDate currentDate = LocalDate.now();
+            String date = currentDate.toString();        
+        %>
+        
         <div class="backDiv" onmouseover="backOver()" onmouseout="backOut()" onclick="backClick()">
             <img class="icon" id="backIcon" src="../View/Assets/Arrow.png">
         </div>
-        <div class="noteDiv">
-            <div class="topicBarDiv">
-                <div class="titleDiv">
-                    <form action="" method="POST">
-                        <input type="text" class="title" name="title" placeholder="TITLE..."> 
-                    </form>
+        <form id="form" action="/WebNotes/CreateNote" method="POST">
+            <div class="noteDiv">
+                <div class="topicBarDiv">
+                    <div class="titleDiv">
+                        <input type="text" class="title" name="title" placeholder="TITLE...">   
+                    </div>
+                    <div class="dateDiv">
+                        <input type="hidden" name="date" value="<%= date %>"> 
+                        <p class="date"><%= date %></p>
+                    </div>          
                 </div>
-                <div class="dateDiv">
-                    <form action="" method="POST">
-                        <input type="hidden" name="date"> 
-                        <p class="date">19/06/2024</p>
-                    </form>
-                </div>
-            </div>
-            <div class="contentDiv">
-                <form action="" method="POST">
+                <div class="contentDiv">
                     <textarea class="content" name="content" placeholder="Note..."></textarea>
-                </form>
+                </div>       
+            </div>   
+            <div class="saveDiv" onmouseover="saveOver()" onmouseout="saveOut()" onclick="document.getElementById('form').submit()">
+                <img class="icon" id="saveIcon" src="../View/Assets/Save.png">
             </div>
-        </div>
-        <div class="saveDiv" onmouseover="saveOver()" onmouseout="saveOut()" onclick="saveClick()">
-            <img class="icon" id="saveIcon" src="../View/Assets/Save.png">
-        </div>
-        
+        </form>
+
         <script>
             //Back button functions
 
@@ -76,11 +78,6 @@
                     save.src = "../View/Assets/Save.png";
                 }
 
-
-            function saveClick() 
-                {
-                    window.location.href = 'display.jsp';
-                }
         </script>
         
     </body>

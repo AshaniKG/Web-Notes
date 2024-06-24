@@ -15,7 +15,8 @@
     <body>
         <section>
         <div class="wrapper">
-            <form action="">
+
+            <form action="/WebNotes/Registation" method="post">
                 <h1>Register </h1>
                 <div class="input-box">
                     <label for="">User Name</label>
@@ -28,8 +29,8 @@
                 </div>
                 
                 <div class="buttons">
-                    <button type="submit">Sing In</button>
-                    <button type="button">Sing Up</button>
+                    <button type="submit">Sing Up</button>
+                    <a href="/WebNotes/index.jsp"><button type="button">Sing In</button></a>
                 </div>
             </form>
         </div>
