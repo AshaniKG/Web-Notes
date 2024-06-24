@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.notesFetchModel;
 
 /**
@@ -32,11 +33,11 @@ public class DisplayController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        // Sandun Sign In unama UserId Eka Session ekata dala methanin eka Catch karanna oni
         
-       //        HttpSession session = request.getSession(true);
-       //        String userId = session.getAttribute("userId").toString();
-           String userId = "2";
+        
+               HttpSession session = request.getSession(true);
+               String userId = session.getAttribute("userId").toString();
+           
         
         try{
                try (ResultSet result = notesFetchModel.fetchNotes(userId))
