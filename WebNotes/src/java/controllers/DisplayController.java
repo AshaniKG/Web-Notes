@@ -41,7 +41,7 @@ public class DisplayController extends HttpServlet {
 
         
         try{
-               try (ResultSet result = notesFetchModel.fetchNotes(userId))
+               try (ResultSet result = notesFetchModel.fetchNotesByUserId(userId))
                {
                    
                    request.setAttribute("notesResult", result);

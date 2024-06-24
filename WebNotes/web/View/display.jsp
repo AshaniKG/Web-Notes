@@ -94,6 +94,6 @@
             </div>
    
         <% } }%>
-        <a class="addNewButton" href="NewNote">+</a>
+        <a class="addNewButton" href="CreateNote? =new">+</a>
     </body>
 </html>
